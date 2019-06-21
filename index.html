@@ -162,7 +162,7 @@ body {
 
 
         <div class="mb-3">
-          <label for="username">이름</label>
+          <label for="username">계약자</label>
           <div class="input-group">
 
             <input type="text" class="form-control" id="username" placeholder="이름" required>
@@ -347,6 +347,26 @@ body {
 
 <script>
 $("#preloader").hide();
+// 숫자 타입에서 쓸 수 있도록 format() 함수 추가
+Number.prototype.format = function(){
+    if(this==0) return 0;
+ 
+    var reg = /(^[+-]?\d+)(\d{3})/;
+    var n = (this + '');
+ 
+    while (reg.test(n)) n = n.replace(reg, '$1' + ',' + '$2');
+ 
+    return n;
+};
+ 
+// 문자열 타입에서 쓸 수 있도록 format() 함수 추가
+String.prototype.format = function(){
+    var num = parseFloat(this);
+    if( isNaN(num) ) return "0";
+ 
+    return num.format();
+};
+
 function test(){
 	$("#preloader").show();
 	var dongho = $("#dong")[0].value +"_" + $("#ho")[0].value;
@@ -365,7 +385,7 @@ function test(){
 				result.appendChild(litext[0]);
 			}
 			for(var i=0; i < data.length; ++i){
-				var litext = $('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">입금자 : '+data[i].name+'</h6><small class="text-muted">'+new Date(data[i].date).toISOString().slice(0,10)+'</small></div><span class="text-muted">'+data[i].deposit+'원</span></li>');
+				var litext = $('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">입금자 : '+data[i].name+'</h6><small class="text-muted">'+new Date(data[i].date).toISOString().slice(0,10)+'</small></div><span class="text-muted">'+data[i].deposit.format()+'원</span></li>');
 				result.appendChild(litext[0]);
 			}
 			resultCount.append(data.length);
