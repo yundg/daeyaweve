@@ -35,6 +35,9 @@
 	    font-weight: 700;
 	    color: #fff;
     }
+	.lead {
+	    font-size: 16px;
+	}
     .control .closable{
     	width: 30px;
 	    height: 30px;
@@ -337,6 +340,7 @@ body {
     </div>
   </div>
 </div>
+</body>
 </html>
 
 
@@ -355,6 +359,7 @@ function test(){
 	$.ajax({
 		url: url, method:"GET", data: param,dataType:"json", cache: false, async:true, 
 		success: function (data, status, xhr) {
+			$("#preloader").hide();
 			if(data.length == 0){
 				var litext = $('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">입금정보가 존재하지 않습니다.</h6><small class="text-muted"></small></div><span class="text-muted"></span></li>');
 				result.appendChild(litext[0]);
@@ -364,6 +369,7 @@ function test(){
 				result.appendChild(litext[0]);
 			}
 			resultCount.append(data.length);
+			$('html, body').animate({scrollTop : 0}, 200);
 			$("#preloader").hide();
 		}, 
 		error: function (jqXHR, textStatus, errorThrown) {
