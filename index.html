@@ -141,13 +141,13 @@ body {
 		<div class="title">대야역두산위브</div>
 	</div>
 <div class="container">
-  <div class="py-5 text-center">
+  <div class="py-5 text-center" style="padding-bottom: 2rem!important;padding-top: 2rem!important;">
     <h2>임예협비 납부조회</h2>
-    <p class="lead">아래 내용을 입력하신 뒤 조회버튼을 누르세요.</p>
+    <p class="lead" style="font-size: 14px;">아래 내용을 입력하신 뒤 조회버튼을 누르세요.</p>
   </div>
-
+  <!--
   <div class="row">
-    <div class="col-md-4 order-md-2 mb-4">
+    <div id="resultCon" class="col-md-12 order-md-2 mb-4">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
         <span class="text-muted">검색결과</span>
         <span id="resultCount" class="badge badge-secondary badge-pill"></span>
@@ -156,11 +156,33 @@ body {
       </ul>
 
     </div>
-    <div class="col-md-8 order-md-1">
+  </div>
+  -->
+  <div class="row">
+    <div id="resultCon" class="col-md-12 order-md-1">
+
+	<h4 class="d-flex justify-content-between align-items-center mb-3">
+		<span class="text-muted">검색결과</span>
+		<span id="resultCount" class="badge badge-secondary badge-pill"></span>
+	</h4>
+	<table class="table table-hover" style="text-align: center;    border-bottom: 1px solid rgba(0,0,0,.1);">
+	  <thead class="thead-light">
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">입금일자</th>
+		  <th scope="col">입금자</th>
+		  <th scope="col">금액</th>
+		</tr>
+	  </thead>
+	  <tbody id = "result">
+	  </tbody>
+	</table>
+	</div>
+</div>
+	<div class="row">
+    <div class="col-md-12 order-md-1">
       <h4 class="mb-3">정보 입력</h4>
       <form class="needs-validation" novalidate>
-
-
         <div class="mb-3">
           <label for="name">계약자</label>
           <div class="input-group">
@@ -210,121 +232,145 @@ body {
 				<option>103</option>
 				<option>104</option>
 				<option>105</option>
+				<option>106</option>
 				<option>201</option>
 				<option>202</option>
 				<option>203</option>
 				<option>204</option>
 				<option>205</option>
+				<option>206</option>
 				<option>301</option>
 				<option>302</option>
 				<option>303</option>
 				<option>304</option>
 				<option>305</option>
+				<option>306</option>
 				<option>401</option>
 				<option>402</option>
 				<option>403</option>
 				<option>404</option>
 				<option>405</option>
+				<option>406</option>
 				<option>501</option>
 				<option>502</option>
 				<option>503</option>
 				<option>504</option>
 				<option>505</option>
+				<option>506</option>
 				<option>601</option>
 				<option>602</option>
 				<option>603</option>
 				<option>604</option>
 				<option>605</option>
+				<option>606</option>
 				<option>701</option>
 				<option>702</option>
 				<option>703</option>
 				<option>704</option>
 				<option>705</option>
+				<option>706</option>
 				<option>801</option>
 				<option>802</option>
 				<option>803</option>
 				<option>804</option>
 				<option>805</option>
+				<option>806</option>
 				<option>901</option>
 				<option>902</option>
 				<option>903</option>
 				<option>904</option>
 				<option>905</option>
+				<option>906</option>
 				<option>1001</option>
 				<option>1002</option>
 				<option>1003</option>
 				<option>1004</option>
 				<option>1005</option>
+				<option>1006</option>
 				<option>1101</option>
 				<option>1102</option>
 				<option>1103</option>
 				<option>1104</option>
 				<option>1105</option>
+				<option>1106</option>
 				<option>1201</option>
 				<option>1202</option>
 				<option>1203</option>
 				<option>1204</option>
 				<option>1205</option>
+				<option>1206</option>
 				<option>1301</option>
 				<option>1302</option>
 				<option>1303</option>
 				<option>1304</option>
 				<option>1305</option>
+				<option>1306</option>
 				<option>1401</option>
 				<option>1402</option>
 				<option>1403</option>
 				<option>1404</option>
 				<option>1405</option>
+				<option>1406</option>
 				<option>1501</option>
 				<option>1502</option>
 				<option>1503</option>
 				<option>1504</option>
 				<option>1505</option>
+				<option>1506</option>
 				<option>1601</option>
 				<option>1602</option>
 				<option>1603</option>
 				<option>1604</option>
 				<option>1605</option>
+				<option>1606</option>
 				<option>1701</option>
 				<option>1702</option>
 				<option>1703</option>
 				<option>1704</option>
 				<option>1705</option>
+				<option>1706</option>
 				<option>1801</option>
 				<option>1802</option>
 				<option>1803</option>
 				<option>1804</option>
 				<option>1805</option>
+				<option>1806</option>
 				<option>1901</option>
 				<option>1902</option>
 				<option>1903</option>
 				<option>1904</option>
 				<option>1905</option>
+				<option>1906</option>
 				<option>2001</option>
 				<option>2002</option>
 				<option>2003</option>
 				<option>2004</option>
 				<option>2005</option>
+				<option>2006</option>
 				<option>2101</option>
 				<option>2102</option>
 				<option>2103</option>
 				<option>2104</option>
 				<option>2105</option>
+				<option>2106</option>
 				<option>2201</option>
 				<option>2202</option>
 				<option>2203</option>
 				<option>2204</option>
 				<option>2205</option>
+				<option>2206</option>
 				<option>2301</option>
 				<option>2302</option>
 				<option>2303</option>
 				<option>2304</option>
 				<option>2305</option>
+				<option>2306</option>
 				<option>2401</option>
 				<option>2402</option>
 				<option>2403</option>
 				<option>2404</option>
 				<option>2405</option>
+				<option>2406</option>
             </select>
 
           </div>
@@ -332,12 +378,8 @@ body {
         </div>
         <hr class="mb-4">
         <div class="custom-control custom-checkbox">
-          <label class="custom-control-label" for="same-address">문구입력1</label>
+          <label class="custom-control-label" for="same-address">조회결과와 실제 입금내역이 맞지 않으시면 임예협운영진에게 문의해주시기 바랍니다.</label>
         </div>
-        <div class="custom-control custom-checkbox">
-          <label class="custom-control-label" for="save-info">문구입력2</label>
-        </div>
-
 
         <hr class="mb-4">
         <input type="button" class="btn btn-primary btn-lg btn-block" onclick="test();" value="조회"></input>
@@ -352,6 +394,8 @@ body {
 
 <script>
 $("#preloader").hide();
+$("#resultCon").hide();
+$("#phone").keyup(function(){ $(this).val($(this).val().replace(/[^0-9:\-]/gi,"") ); });
 // 숫자 타입에서 쓸 수 있도록 format() 함수 추가
 Number.prototype.format = function(){
     if(this==0) return 0;
@@ -378,7 +422,12 @@ function test(){
 		forms[0].classList.add('was-validated');
 		return;
 	}
+
+
+
+
 	$("#preloader").show();
+	$("#phone")[0].value = phoneFomatter($("#phone")[0].value);
 	var dongho = $("#dong")[0].value +"_" + $("#ho")[0].value;
 	var name = $("#name")[0].value;
 	var phone = $("#phone")[0].value;
@@ -392,13 +441,16 @@ function test(){
 	$.ajax({
 		url: url, method:"GET", data: param,dataType:"json", cache: false, async:true, 
 		success: function (data, status, xhr) {
+			$("#resultCon").show();
 			$("#preloader").hide();
 			if(data.length == 0){
-				var litext = $('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">입금정보가 존재하지 않습니다.</h6><small class="text-muted"></small></div><span class="text-muted"></span></li>');
+				var litext = $('<tr><td scope="row" colspan="4">입금정보가 존재하지 않습니다. 입예협 운영진에게 문의하세요.</td>');
+				//var litext = $('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">입금정보가 존재하지 않습니다.</h6><small class="text-muted"></small></div><span class="text-muted"></span></li>');
 				result.appendChild(litext[0]);
 			}
 			for(var i=0; i < data.length; ++i){
-				var litext = $('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">입금자 : '+data[i].name+'</h6><small class="text-muted">'+new Date(data[i].date).toISOString().slice(0,10)+'</small></div><span class="text-muted">'+data[i].deposit.format()+'원</span></li>');
+				var litext = $('<tr><th scope="row">'+(i+1)+'</th><td>'+new Date(data[i].date).toISOString().slice(0,10)+'</td><td>'+data[i].name+'</td><td>'+data[i].deposit.format()+'원</td></tr>');
+				//var litext = $('<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">입금자 : '+data[i].name+'</h6><small class="text-muted">'+new Date(data[i].date).toISOString().slice(0,10)+'</small></div><span class="text-muted">'+data[i].deposit.format()+'원</span></li>');
 				result.appendChild(litext[0]);
 			}
 			resultCount.append(data.length);
@@ -410,5 +462,35 @@ function test(){
 		   $("#preloader").hide();
 		}
 	});
+}
+
+  function phoneFomatter(num,type){
+    var formatNum = '';
+    if(num.length==11){
+        if(type==0){
+            formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-****-$3');
+        }else{
+            formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+        }
+    }else if(num.length==8){
+        formatNum = num.replace(/(\d{4})(\d{4})/, '$1-$2');
+    }else{
+        if(num.indexOf('02')==0){
+            if(type==0){
+                formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-****-$3');
+            }else{
+                formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-$2-$3');
+            }
+        }else{
+            if(type==0){
+                formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-***-$3');
+            }else{
+                formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+            }
+        }
+    }
+    return formatNum;
+
+
 }
 </script>
